@@ -1,0 +1,112 @@
+// ---- Global-Tags ----
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  &.fixed {
+    overflow-y: hidden;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  font-family: $f1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+}
+
+a {
+  color: $blue_d;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.fa-regular {
+  color: $blue;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+// ---- Global-Classes ----
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1804px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 24px;
+  background: $yellow;
+  color: $black;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  i {
+    font-size: 16px;
+    line-height: 18px;
+    color: $black;
+    margin-right: 10px;
+  }
+  &:hover, &:focus {
+    background: darken($yellow, 15%);
+  }
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  color: $black;
+  border: 2px solid $blue_l;
+  border-radius: 6px;
+  padding: 9px 20px;
+  transition: 0.2s;
+  input {
+    width: 100%;
+    &::placeholder {
+      color: $blue_l;
+    }
+  }
+  i {
+    color: $blue_l;
+    transition: 0.2s;
+  }
+  &:hover {
+    border-color: $blue;
+    i {
+      color: $blue;
+    }
+  }
+}
+
+// ScrollBar
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $black;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+// Selection
+::selection {
+  background: rgba($black, 0.6) !important;
+}

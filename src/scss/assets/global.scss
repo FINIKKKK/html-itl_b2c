@@ -25,10 +25,8 @@ body {
 }
 
 a {
-  color: $blue_d;
-  &:hover {
-    text-decoration: underline;
-  }
+  color: $black;
+  text-decoration: none;
 }
 
 .fa-regular {
@@ -91,6 +89,18 @@ a {
       color: $blue;
     }
   }
+}
+
+.block {
+  &:not(:last-child) {
+    margin-bottom: 68px;
+  }
+}
+
+.title {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 40px;
 }
 
 // ScrollBar

@@ -6,17 +6,38 @@
 })
 
 <body>
-
+<div class="container">
     @@include('./blocks/header.html')
 
 
-    <div class="categories"></div>
+    <section class="categories block">
+        <h3 class="title">Популярные категории</h3>
+        <ul>
+            @@include('./blocks/category.html')
+            @@include('./blocks/category.html')
+            @@include('./blocks/category.html')
+            @@include('./blocks/category.html')
+            @@include('./blocks/category.html')
+            @@include('./blocks/category.html')
+            @@include('./blocks/category.html')
+            @@include('./blocks/category.html')
+        </ul>
+    </section>
 
-    @@include('./blocks/footer.html')
+    <section class="blog block">
+        <ul class="posts">
+            @@include('./blocks/post.html')
+            @@include('./blocks/post.html')
+            @@include('./blocks/post.html')
+        </ul>
+    </section>
+
+</div>
+@@include('./blocks/footer.html')
 
 
-    <!-- Scripts -->
-    @@include('./blocks/main/js.html')
+<!-- Scripts -->
+@@include('./blocks/main/js.html')
 
 </body>
 

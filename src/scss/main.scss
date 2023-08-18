@@ -1,5 +1,8 @@
 .header {
   padding: 32px 0;
+  .container {
+    max-width: 1804px;
+  }
   .menu {
     display: flex;
     align-items: center;
@@ -160,8 +163,11 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
     transition: 0.3s;
+    border-radius: 6px;
   }
   .content {
     z-index: 30;
@@ -303,6 +309,10 @@
   }
   h4 {
     margin-bottom: 6px;
+    transition: 0.2s;
+    &:hover {
+      color: $blue;
+    }
   }
   .available {
     font-size: 14px;
@@ -311,16 +321,6 @@
   }
   .price {
     margin-bottom: 12px;
-    .discount {
-      font-size: 14px;
-      line-height: 18px;
-      text-decoration: line-through;
-      color: #7D7D7D;
-    }
-    h3 {
-      font-size: 24px;
-      line-height: 32px;
-    }
   }
   .controls {
     display: flex;
@@ -344,5 +344,92 @@
   }
   &:hover {
     border-color: $blue;
+  }
+}
+
+.index {
+  background-color: $bg;
+  padding: 36px 0;
+  .sliders {
+    margin-bottom: 32px;
+    display: flex;
+  }
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  .benefit {
+    display: flex;
+    align-items: center;
+    padding: 20px 28px;
+    border-radius: 6px;
+    background-color: $white;
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+    i {
+      font-size: 26px;
+      line-height: 18px;
+      margin-right: 16px;
+    }
+  }
+}
+
+.banners {
+  margin-right: 24px;
+}
+
+.banner {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 1272px;
+  height: 320px;
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    padding: 64px ;
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $yellow;
+      left: -52%;
+      top: 0;
+      width: 150%;
+      height: 150%;
+      z-index: -1;
+      transform: skewX(-21deg);
+    }
+    h1 {
+      font-size: 40px;
+      line-height: 44px;
+      margin-bottom: 24px;
+      width: 520px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 32px;
+      color: $blue;
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.day {
+
+}
+.day_product {
+  .rating {
+
   }
 }

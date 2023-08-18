@@ -11,46 +11,27 @@
 <section class="index block">
     <div class="container">
         <div class="sliders">
-            <div class="banners">
-                @@include('./blocks/banner.html')
-                @@include('./blocks/banner.html')
-                @@include('./blocks/banner.html')
-                @@include('./blocks/banner.html')
+            <div class="banners swiper">
+                <div class="swiper-wrapper">
+                    @@include('./blocks/banner.html')
+                    @@include('./blocks/banner.html')
+                    @@include('./blocks/banner.html')
+                    @@include('./blocks/banner.html')
+                </div>
+
+                <div class="swiper-pagination"></div>
             </div>
 
-            <div class="day">
-                <div class="day_product">
-                    <div class="title">
-                        <h4>Товар дня</h4>
-                        <div class="counter">
-                            <span class="counter_item hours">22</span>
-                            <span class="counter_item minutes">37</span>
-                            <span class="counter_item seconds">52</span>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <a href="#">
-                            <img src="./img/day.png" alt="product">
-                        </a>
-                        <div class="info">
-                            <h4><a href="#">Смартфон Samsung Galaxy S23 256GB Phantom Black</a></h4>
-                            <div class="rating">
-                                <div class="stars">
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>17 отзывов</p>
-                            </div>
-                            <div class="price">
-                                <div class="discount">529990</div>
-                                <h3>499 990 ₸</h3>
-                            </div>
-                        </div>
-                    </div>
+            <div class="day swiper">
+                <div class="swiper-wrapper">
+                    @@include('./blocks/day_product.html')
+                    @@include('./blocks/day_product.html')
+                    @@include('./blocks/day_product.html')
+                    @@include('./blocks/day_product.html')
+                    @@include('./blocks/day_product.html')
                 </div>
+
+                <div class="swiper-pagination"></div>
             </div>
         </div>
         <div class="benefits">
@@ -109,13 +90,28 @@
             </li>
         </ul>
 
-        <ul class="products">
-            @@include('./blocks/product.html')
-            @@include('./blocks/product.html')
-            @@include('./blocks/product.html')
-            @@include('./blocks/product.html')
-            @@include('./blocks/product.html')
-        </ul>
+        <div class="products swiper">
+            <div class="swiper-wrapper">
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+                @@include('./blocks/product.html')
+            </div>
+
+            <div class="prev">
+                <i class="fa-regular fa-angle-left"></i>
+            </div>
+            <div class="next">
+                <i class="fa-regular fa-angle-right"></i>
+            </div>
+        </div>
     </section>
 
     <section class="categories block">

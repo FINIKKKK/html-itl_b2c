@@ -1,28 +1,57 @@
 // WEBP
 import {isWebp} from "./function.js";
-import Swiper from 'swiper';
 
 isWebp();
 
 
-const sliderBanners = new Swiper('.banners', {
-    slidesPerView: 1,
+import Swiper from "swiper";
+import {Navigation, Pagination, EffectFade, Autoplay} from 'swiper/modules';
+
+
+const sliderProducts = new Swiper('.products', {
+    modules: [Navigation],
+    slidesPerView: 6,
     loop: false,
-    spaceBetween: 100,
+    spaceBetween: 24,
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+    },
+});
+
+const sliderBanners = new Swiper('.banners', {
+    modules: [Pagination, EffectFade, Autoplay],
+    slidesPerView: 1,
+    loop: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
-    },
-    navigation: {
-        nextEl: '.next',
-        prevEl: '.prev',
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
     autoplay: {
-        delay: 8000,
+        delay: 7000,
+        disableOnInteraction: true,
+    },
+});
+
+const sliderDay = new Swiper('.day', {
+    modules: [Pagination, EffectFade, Autoplay],
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 40,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 5000,
         disableOnInteraction: true,
     },
 });

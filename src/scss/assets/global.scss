@@ -41,7 +41,7 @@ a {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1704px;
+  max-width: 1734px;
 }
 
 .btn {
@@ -122,6 +122,31 @@ a {
   h3 {
     font-size: 24px;
     line-height: 32px;
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  width: auto !important;
+  top: auto;
+  right: auto;
+  left: 64px;
+  bottom: 24px;
+  .swiper-pagination-bullet {
+    transition: 0.2s;
+    background-color: $blue;
+    width: 4px;
+    height: 4px;
+    opacity: 0.3;
+    margin: 0 !important;
+    &:not(:last-child) {
+      margin-right: 4px !important;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    width: 16px;
+    border-radius: 4px;
+    opacity: 1;
   }
 }
 

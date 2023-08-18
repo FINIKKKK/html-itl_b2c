@@ -7,7 +7,6 @@ isWebp();
 import Swiper from "swiper";
 import {Navigation, Pagination, EffectFade, Autoplay} from 'swiper/modules';
 
-
 const sliderProducts = new Swiper('.products', {
     modules: [Navigation],
     slidesPerView: 6,

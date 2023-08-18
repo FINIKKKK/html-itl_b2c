@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./blocks/main/head.html', {
+"title": "Каталог",
+})
+
+<body>
+@@include('./blocks/header.html')
+
+<div class="container">
+    <section class="express">
+        <h1>Доступна экспресс-доставка
+            за 2 часа! </h1>
+        <img src="./img/express.png" alt="express_delivery">
+    </section>
+
+    <nav class="nav">
+        <a href="#">Главная</a>
+        <a href="#">Каталог</a>
+        <a href="#">Электроника</a>
+        <a href="#" class="active">Электроника</a>
+    </nav>
+
+    <section class="catalog">
+        <h3 class="title">Телефоны и смарт-часы <span>—  113</span></h3>
+
+        <ul class="categories__items">
+            <li class="category">
+                <img src="./img/product.png" alt="product">
+                <div class="info">
+                    <a href="#">Смартфоны</a>
+                    <p>781 товар</p>
+                </div>
+            </li>
+            <li class="category">
+                <img src="./img/product.png" alt="product">
+                <div class="info">
+                    <a href="#">Смартфоны</a>
+                    <p>781 товар</p>
+                </div>
+            </li>
+        </ul>
+
+        <main>
+            @@include('./blocks/select.html')
+
+            <div class="main_products">
+                <div class="main_products-header">
+                    @@include('./blocks/select.html')
+                    <div class="btns_structure">
+                        <i class="fa-regular fa-grid"></i>
+                        <i class="fa-regular fa-grid"></i>
+                    </div>
+                </div>
+
+                <div class="items">
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                    @@include('./blocks/product.html')
+                </div>
+
+                <div class="pagination">
+                    <button class="more">Показать ещё</button>
+                    <ul>
+                        <li class="arrow">
+                            <i class="fa-regular fa-angle-left"></i>
+                        </li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li class="skip">...</li>
+                        <li>55</li>
+                        <li class="arrow">
+                            <i class="fa-regular fa-angle-right"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    @@include('./blocks/footer.html')
+</div>
+
+<!-- Scripts -->
+@@include('./blocks/main/js.html')
+
+</body>
+
+</html>

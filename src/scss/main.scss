@@ -417,7 +417,7 @@
       -webkit-box-orient: vertical;
       overflow-y: hidden;
     }
-    &:hover {
+    &:hover a {
       color: $blue;
     }
   }
@@ -639,6 +639,109 @@
   }
 }
 
+main {
+  display: flex;
+  justify-content: space-between;
+  .main_products {
+    width: calc(100% - (260px + 28px));
+  }
+}
+
+.main_products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  .btns_structure {
+    display: flex;
+    align-items: center;
+    background-color: rgba(14, 108, 221, 0.10);
+    border-radius: 6px;
+    padding: 2px;
+  }
+  .btn_structure {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    i {
+      color: $black;
+    }
+    &.active {
+      background-color: $white;
+    }
+  }
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+  .selected {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    border: 1px solid rgba(14, 108, 221, 0.20);
+    border-radius: 6px;
+    transition: 0.2s;
+    i {
+      margin-left: 12px;
+      color: $black;
+    }
+  }
+  .dropdown {
+    position: absolute;
+  }
+  &:hover .selected {
+    border-color: $blue;
+  }
+  &.active {
+    .selected {
+      .fa-angle-down {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .dropdown {
+    margin-top: 10px;
+    z-index: 30;
+    background-color: $white;
+    box-shadow: 0 0 10px rgba($black, 0.1);
+    padding: 12px 20px;
+    border-radius: 6px;
+    width: 100%;
+    li {
+      color: rgba($black, 0.7);
+      transition: 0.2s;
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+      &:hover {
+        color: $blue;
+      }
+      &.active {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+  margin-bottom: 68-24px;
+  .product_wrapper {
+    padding: 0 12px;
+  }
+  .product {
+    margin-bottom: 24px;
+    margin-right: 0;
+    width: 264px;
+  }
+}
+
 .pagination {
   display: flex;
   align-items: center;
@@ -649,6 +752,9 @@
     border-radius: 3px;
     padding: 12px 86px;
     transition: 0.2s;
+    &:hover {
+      border-color: $black;
+    }
   }
   ul {
     display: flex;
@@ -686,4 +792,9 @@
       border-color: transparent;
     }
   }
+}
+
+.sidebar {
+  width: 260px;
+  margin-right: 28px;
 }

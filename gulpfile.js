@@ -291,7 +291,7 @@ const svgSprite = () => {
 };
 
 // Последовательная обработка шрифтов
-const fonts = gulp.series(otf2ttf, ttf2woff, fontsStyle);
+const fonts = gulp.series(otf2ttf, ttf2woff);
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -301,7 +301,7 @@ function watcher() {
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.img, img);
     gulp.watch(path.watch.svgIcons, svgSprite);
-    // gulp.watch(path.watch.fonts, fonts);
+    gulp.watch(path.watch.fonts, fonts);
 }
 
 // Основные задачи

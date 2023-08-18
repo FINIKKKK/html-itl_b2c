@@ -82,6 +82,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    a {
+      color: $blue_d;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -97,13 +103,31 @@
     margin-right: 23px;
   }
   .img {
+    width: 192px;
+    height: 192px;
     border-radius: 6px;
     background-color: $bg;
-    padding: 32px;
     margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
   }
   p {
     text-align: center;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    p {
+      color: $blue;
+    }
   }
 }
 
@@ -120,6 +144,7 @@
   height: 380px;
   position: relative;
   overflow: hidden;
+  border-radius: 6px;
   &::after {
     content: '';
     position: absolute;
@@ -136,12 +161,13 @@
     height: 100%;
     position: absolute;
     object-fit: cover;
+    transition: 0.3s;
   }
   .content {
-    margin-top: auto;
-    position: relative;
     z-index: 30;
     padding: 32px;
+    position: absolute;
+    bottom: 20px;
   }
   .category {
     margin-bottom: 8px;
@@ -165,5 +191,158 @@
     border: 1px solid $gray;
     padding: 4px 16px;
     color: $white;
+  }
+  &:hover {
+    img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.hits {
+  .title {
+    margin-bottom: 16px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .tag {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid $blue_l;
+    border-radius: 6px;
+    padding: 0px 16px;
+    transition: 0.2s;
+    &:hover {
+      border-color: $blue
+    }
+  }
+  .products {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.product {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+  width: 264px;
+  border-radius: 6px;
+  border: 1px solid rgba($blue, 0.2);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .img {
+    position: relative;
+    margin-bottom: 21px;
+    img {
+      width: 200px;
+      height: 188px;
+      object-fit: cover;
+    }
+    .tags {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .tag {
+      border: none;
+      margin-right: 0;
+      width: 100%;
+      padding: 0;
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        border-radius: 6px;
+        color: $white;
+        padding: 1px 12px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+      &.green p {
+        display: inline-block;
+        background-color: #34A853;
+      }
+      &.red_l p {
+        display: inline-block;
+        background-color: #FB6340;
+      }
+      &.red_d p {
+        display: inline-block;
+        background-color: #E31E24;
+      }
+      &.blue p {
+        display: inline-block;
+        background-color: $blue;
+      }
+    }
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    i {
+      color: $yellow;
+      font-size: 12px;
+      line-height: 12px;
+      margin-right: 8px;
+      font-weight: 700;
+    }
+    p {
+      color: #595959;
+      line-height: 24px;
+    }
+  }
+  h4 {
+    margin-bottom: 6px;
+  }
+  .available {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  .price {
+    margin-bottom: 12px;
+    .discount {
+      font-size: 14px;
+      line-height: 18px;
+      text-decoration: line-through;
+      color: #7D7D7D;
+    }
+    h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn {
+      font-size: 14px;
+    }
+    .icons i {
+      font-size: 20px;
+      line-height: 24px;
+      color: $blue_l;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 13px;
+      }
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  &:hover {
+    border-color: $blue;
   }
 }

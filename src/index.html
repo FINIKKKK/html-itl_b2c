@@ -9,6 +9,36 @@
 <div class="container">
     @@include('./blocks/header.html')
 
+    <section class="hits block">
+        <h3 class="title">Хиты продаж</h3>
+        <ul class="tags">
+            <li class="tag">
+                <a href="#">
+                    Все категории
+                </a>
+            </li> <li class="tag">
+            <a href="#">
+                Смартфоны
+            </a>
+        </li> <li class="tag">
+            <a href="#">
+                Ноутбуки
+            </a>
+        </li> <li class="tag">
+            <a href="#">
+                Умные часы
+            </a>
+        </li>
+        </ul>
+
+        <ul class="products">
+            @@include('./blocks/product.html')
+            @@include('./blocks/product.html')
+            @@include('./blocks/product.html')
+            @@include('./blocks/product.html')
+            @@include('./blocks/product.html')
+        </ul>
+    </section>
 
     <section class="categories block">
         <h3 class="title">Популярные категории</h3>
@@ -32,9 +62,8 @@
         </ul>
     </section>
 
+    @@include('./blocks/footer.html')
 </div>
-@@include('./blocks/footer.html')
-
 
 <!-- Scripts -->
 @@include('./blocks/main/js.html')
